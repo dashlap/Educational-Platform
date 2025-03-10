@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #01004b;
+    height: 60px;
+    /* border-bottom: 1px solid #a50c0a; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+}
+.logo p {
+    margin-left: 1vw;
+    color: #ff5e00;
+    font-family: federant;
+    font-size: 30px;
+    
+}
+.logo :hover {
+    color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: IMB;
+    color: #f0f4f5;
+    margin-left: 50px;
+}
+
+.link:hover {
+    /* border-bottom: 2px solid rgb(208,169,25); */
+    color: #ff5e00;
+
+}
+
+
+.page {
+
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.home h1 {
+    font-size: 60px;
+    font-family: ;
+    font-weight: 500;
+    color: #ff5e00;
+}
+
+.home p {
+    font-size: 22px;
+    font-family: ;
+    font-weight: 500;
+    color: #01004d;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news h2 {
+    font-size: 30px;
+    font-family: ;
+    font-weight: 400;
+    color: #01004d;
+}
+
+
+:root {
+    --primary: #FF5E00;
+    --secondary: #01004B;
+    --accent: #40E0D0;
+    --neutral: #F5F5F5;
+    --text: #333;
+}
+
+.news-slider {
+    max-width: 70vw;
+    margin: 5vh auto;
+    padding: 5%;
+    background: var(--secondary);
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5vw;
+    padding: 7% 0;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 2vw;
+}
+
+.slide {
+    flex: 1;
+    min-width: 60%;
+    background: var(--neutral);
+    border-radius: 1vw;
+    padding: 3%;
+    box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.slide h3 {
+    color: var(--primary);
+    font-size: 2.2vw;
+    margin: 0.5vw 0;
+    font-family: arial;
+    font-weight: 400;
+}
+
+.slide img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 0.5vw;
+    margin: 2vw 0;
+    box-shadow: 0 0.2vw 0.8vw rgba(0,0,0,0.2);
+}
+
+.slide p {
+    color: var(--text);
+    font-size: 1.3vw;
+    line-height: 1.4;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    color: var(--primary);
+    border: none;
+    padding: 1.5% 2%;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 999;
+}
+
+.buttons:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.prev { left: 0vw; }
+.next { right: 1vw; }
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 2vw;
+}
+
+.indicator {
+    width: 1.5vw;
+    height: 0.3vw;
+    background: rgba(255,255,255,0.5);
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 16%;
+  border: 1px solid transparent;
+}
+
+.indicator.active {
+    background: var(--accent);
+    
+}
+
+
+/* .courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+}
+
+.courses h2 {
+    font-size: 30px;
+    font-family: ;
+    font-weight: 400;
+    color: #01004d;
+}
+
+.course_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 3%;
+}
+
+.online {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #01004d;
+    border-radius: 20px;
+    width: 20%;
+    padding: 1%;
+    background-color: #cacaff;
+    height: 25vh;
+}
+
+.online:hover {
+    background-color: #4a4aff;
+    
+}
+.online a:hover {
+    color: #ffffff;
+}
+
+.online a {
+    font-size: 20px;
+    font-family: ;
+    color: #36007c;
+
+}
+
+.online img {
+
+}
+
+.teachers_list {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teachers_list h2 {
+    font-size: 30px;
+    font-family: ;
+    font-weight: 400;
+    color: #01004d;
+}
+
+.teacher {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    border: 1px solid #01004d;
+    border-radius: 10px;
+}
+.teacher img {
+    width: 12vw;
+    height: 22vh;
+    border: 1px solid transparent;
+    border-radius: 10px 10px 0 0;
+}
+
+.teacher p {
+    font-size: 18px;
+    font-family: ;
+    font-weight: 400;
+    color: #01004d;
+}
+
+.tearcher_card {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+
+.teacher_text {
+    margin: 3%;
+}
+
+
+.score {
+    display: flex;
+    align-items: center;
+}
+
+.score img {
+    width: 22px;
+    height: 22px;
+}
+
+.score p {
+
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating h2 {
+    font-size: 30px;
+    font-family: ;
+    font-weight: 400;
+    color: #01004d;
+    margin-top: 3%;
+}
+
+.rating p {
+    padding: 2%;
+    font-size: 20px;
+    font-family: ;
+    font-weight: 400;
+    color: #01004d;
+} */
+
+
+
+h2 {
+    color: #ff5e00;
+    text-align: center;
+    font-size: 4vw;
+    margin: 3% 0;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff5e00;
+}
+
+/* Блок курсов */
+.courses {
+    background-color: #01004b;
+    padding: 2%;
+    border-radius: 1rem;
+    margin-bottom: 5%;
+}
+
+.course_list {
+    display: flex;
+    justify-content: space-around;
+    gap: 3%;
+}
+
+.online {
+    flex: 1;
+    background-color: #ff5e00;
+    padding: 3%;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.online img {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* Блок преподавателей */
+.teachers_list {
+    background-color: #01004b;
+    padding: 2%;
+    border-radius: 1rem;
+    margin-bottom: 5%;
+}
+
+.teacher_card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+    padding: 2%;
+}
+
+.teacher {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 2%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.teacher img {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1%;
+}
+
+.score img {
+    width: 2vw;
+    height: auto;
+}
+
+/* Блок рейтинга */
+.rating {
+    background-color: #ff5e00;
+    padding: 4%;
+    border-radius: 1rem;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.rating p {
+    font-size: 2vw;
+    margin: 2% 0;
+}
+
+
+
+@media (max-width: 1024px) {
+    .slides {
+        gap: 1.5vw;
+    }
+    
+    .slide {
+        padding: 2.5vw;
+    }
+    
+    .slide h3 {
+        font-size: 4vw;
+    }
+    
+    .buttons {
+        padding: 1.5vw 2.5vw;
+    }
+
+    h2 {
+        font-size: 3.5vw;
+    }
+
+    .course_list {
+        gap: 2%;
+    }
+
+    .teacher_card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .teacher img {
+        height: 25vw;
+    }
+
+    .rating p {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .news-slider {
+        padding: 6vw 4vw;
+    }
+    
+    .slide {
+        padding: 3vw;
+    }
+    
+    .slide h3 {
+        font-size: 5vw;
+    }
+    
+    .indicator {
+        width: 2vw;
+        height: 0.4vw;
+    }
+    
+    .indicator.active {
+        width: 5vw;
+    }
+    h2 {
+        font-size: 6vw;
+    }
+
+    .course_list {
+        flex-direction: column;
+    }
+
+    .online {
+        margin-bottom: 3%;
+    }
+
+    .teacher_card {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher img {
+        height: 50vw;
+    }
+
+    .score img {
+        width: 4vw;
+    }
+
+    .rating p {
+        font-size: 3vw;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .buttons {
+        padding: 2vw;
+        font-size: 1.8vw;
+    }
+    
+    .indicator {
+        width: 2.5vw;
+        height: 0.5vw;
+    }
+    
+    .indicator.active {
+        width: 6vw;
+    }
+
+    h2 {
+        font-size: 7vw;
+    }
+
+    .course_list {
+        flex-direction: column;
+    }
+
+    .online {
+        margin-bottom: 3%;
+    }
+
+    .teacher_card {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher img {
+        height: 33vw;
+    }
+
+    .score img {
+        width: 5vw;
+    }
+
+    .rating p {
+        font-size: 4vw;
+    }
+}

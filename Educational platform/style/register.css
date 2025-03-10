@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #01004b;
+    height: 60px;
+    /* border-bottom: 1px solid #a50c0a; */
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+}
+.logo p {
+    margin-left: 1vw;
+    color: #ff5e00;
+    font-family: federant;
+    font-size: 30px;
+    
+}
+.logo :hover {
+    color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: IMB;
+    color: #f0f4f5;
+    margin-left: 50px;
+}
+
+.navigation p {
+    color: #ff5e00;
+}
+
+.link:hover {
+    /* border-bottom: 2px solid rgb(208,169,25); */
+    color: #ff5e00;
+
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: ;
+    background-color: #01004b;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #ff5e00;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2vw;
+    font-weight: 400;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 1.2vw;
+    color: #01004b;
+    /* font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif; */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #01004b;
+    font-size: 1.1vw;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #ff5e00;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #ff5e00;
+}
+
+.policy {
+    display: flex;
+}
+
+button {
+    padding: 15px;
+    background-color: #ff5e00;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1.3vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e65400;
+}
+
+button a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1vw;
+    /* font-weight: 600; */
+
+}
+
+.sign a {
+    color: #ff5e00;
+    text-align: center;
+    margin-top: 15px;
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.1vw;
+    /* font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif; */
+}
+
+.sign a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для чекбокса и его лейбла */
+#check_mark + label {
+    display: flex;
+    align-items: center;
+    color: #01004b;
+    margin-bottom: 20px;
+}
+
+/* Убираем стандартные стили инпутов */
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff5e00;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #ff5e00;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z'/%3E%3C/svg%3E");
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+}

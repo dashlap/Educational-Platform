@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #01004b;
+    height: 60px;
+    /* border-bottom: 1px solid #a50c0a; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+}
+.logo p {
+    margin-left: 1vw;
+    color: #ff5e00;
+    font-family: federant;
+    font-size: 30px;
+    
+}
+.logo :hover {
+    color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: IMB;
+    color: #f0f4f5;
+    margin-left: 50px;
+}
+
+.navigation p {
+    color: #ff5e00;
+}
+
+.link:hover {
+    /* border-bottom: 2px solid rgb(208,169,25); */
+    color: #ff5e00;
+
+}
+
+
+/* Базовые настройки */
+:root {
+    --primary: #FF5E00;
+    --secondary: #01004B;
+    --accent-light: #FF7A33; /* Светлый оранжевый */
+    --accent-dark: #9370DB;  /* Темный оранжевый */
+    --neutral: #F8F8F8;      /* Светло-серый */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--secondary);
+    color: white;
+    line-height: 1.6;
+}
+
+.information {
+    max-width: 90vw;
+    margin: 4vh auto;
+    padding: 3vw;
+    background: var(--neutral);
+    border-radius: 1.5vw;
+    box-shadow: 0 0.3vw 1.5vw rgba(0, 0, 0, 0.2);
+}
+
+
+
+.connect {
+    margin: 3vh 0;
+    padding: 2vw;
+    background: white;
+    border-radius: 1vw;
+    color: var(--secondary);
+}
+
+.connect h3 {
+    color: var(--primary);
+    font-size: 2vw;
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    font-weight: 400;
+}
+
+.connect h3::before {
+    content: '';
+    width: 0.5vw;
+    height: 4vh;
+    background: var(--accent-dark);
+    border-radius: 0.3vw;
+}
+
+.phone, .email {
+    
+}
+
+.phone p, .email p {
+    font-size: 1.4vw;
+    margin: 0.8vh 0;
+    color: #333333;
+}
+
+.social_net {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vh;
+    
+}
+
+.social_net a {
+    transition: transform 0.3s ease;
+}
+
+.social_net img {
+    
+    filter: none !important;
+    opacity: 1 !important;
+    width: 4vw !important;
+    
+}
+
+.social_net a:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.address {
+    padding-top: 2vh;
+    background: var(--neutral);
+    border-radius: 1vw;
+    font-size: 1.4vw;
+    text-align: center;
+}
+
+.address p {
+    color: #01004b;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 4vw;
+    }
+    
+    .connect h3 {
+        font-size: 3vw;
+    }
+    
+    .phone p, .email p {
+        font-size: 1.6vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .information {
+        padding: 4vw;
+        border-radius: 3vw;
+    }
+    
+    h2 {
+        font-size: 5vw;
+    }
+    
+    .connect {
+        padding: 3vw;
+        border-radius: 2vw;
+    }
+    
+    .connect h3 {
+        font-size: 3.5vw;
+        
+        align-items: flex-start;
+    }
+    
+    .phone p, .email p {
+        font-size: 2.5vw;
+    }
+    
+    .social_net {
+        
+    }
+    
+    .social_net a {
+        
+    }
+    
+    .address {
+        font-size: 3vw;
+        padding: 3vw;
+        border-radius: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 6vw;
+    }
+    
+    .connect h3 {
+        font-size: 4vw;
+    }
+    
+    .phone p, .email p {
+        font-size: 3vw;
+    }
+    
+    .social_net a {
+        
+    }
+}
