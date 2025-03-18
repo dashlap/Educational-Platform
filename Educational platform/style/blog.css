@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #01004b;
+    padding: 0.5vw 0;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 3vw;
+}
+
+.logo p {
+    margin-left: 1vw;
+    color: #ff5e00;
+    font-family: federant;
+    font-size: 2vw;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo :hover {
+    color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 1.3vw;
+    font-family: IMB;
+    color: #f0f4f5;
+    margin-left: 3vw;
+}
+
+.link:hover {
+    color: #ff5e00;
+    text-decoration: none;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 2vw;
+    background: none;
+    border: none;
+    color: #f0f4f5;
+    cursor: pointer;
+}
+
+
+
+:root {
+    --primary: #FF5E00;
+    --secondary: #01004B;
+    --accent: #40E0D0;
+    --neutral: #F5F5F5;
+    --text: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary);
+    color: white;
+}
+
+.blog-container {
+    max-width: 80vw;
+    margin: 5vh auto;
+    padding: 3vw;
+    background: var(--neutral);
+    border-radius: 1.5vw;
+    color: var(--secondary);
+}
+
+h2 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 3vw;
+    margin: 4vh 0;
+    font-weight: 400;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 1.5vw;
+    margin-bottom: 4vw;
+    overflow: hidden;
+}
+
+.blog-header {
+    position: relative;
+}
+
+.blog-header img {
+    width: 100%;
+    height: 40vw;
+    border-bottom: 0.2vw solid var(--primary);
+}
+
+.blog-header h3 {
+    position: absolute;
+    bottom: 2vw;
+    left: 2vw;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+    font-size: 2.5vw;
+    width: 90%;
+}
+
+.blog-content {
+    padding: 3vw;
+}
+
+.short-text {
+    font-size: 1.6vw;
+    color: var(--text);
+    margin: 0;
+}
+
+.full-text {
+    font-size: 1.6vw;
+    color: var(--text);
+}
+
+.read-more-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1.5vw 3vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 2vw;
+    font-size: 1vw;
+}
+
+.read-more-btn:hover {
+    background: var(--accent);
+}
+
+.blog-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 2vw;
+    border-top: 0.1vw solid var(--primary);
+}
+
+.like-btn, .share-btn, .comment-btn {
+    background: none;
+    color: var(--primary);
+    border: none;
+    font-size: 1.5vw;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.like-btn:hover, .share-btn:hover, .comment-btn:hover {
+    color: var(--accent);
+}
+
+.comments-section {
+    padding: 2vw;
+    background: var(--neutral);
+    border-top: 0.1vw solid var(--primary);
+}
+
+.comments-section h4 {
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin: 2vw 0;
+}
+
+.comment-input {
+    width: 95%;
+    padding: 2vw;
+    border: 0.1vw solid var(--primary);
+    border-radius: 0.5vw;
+    margin-bottom: 2vw;
+    font-size: 1.4vw;
+}
+
+.add-comment-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1.5vw 3vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1vw;
+}
+
+.add-comment-btn:hover {
+    background: var(--accent);
+}
+
+.comments-list {
+    margin-top: 2vw;
+}
+
+.comment-item {
+    background: white;
+    border-radius: 0.5vw;
+    padding: 2vw;
+    margin-bottom: 1vw;
+    font-size: 1.6vw;
+    color: var(--text);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    nav {
+        height: 10vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        margin-left: 3%;
+    }
+    .logo img {
+        width: 5vw;
+    }
+    .logo a {
+        text-decoration: none;
+    }
+
+    .logo p {
+        font-size: 5vw;
+    }
+
+    .navigation {
+
+    }
+    .navigation a {
+        
+    }
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: #01004b;
+        position: absolute;
+        top: 6vw;
+        left: 0;
+        width: 100%;
+        padding: 2vw;
+    }
+
+    .navigation.active {
+        display: flex;
+        position: absolute;
+        z-index: 999
+    }
+
+    .navigation a {
+        margin: 1vw 0;
+        font-size: 4vw;
+    }
+
+    .burger-menu {
+        display: block;
+        font-size: 5vw;
+        margin-right: 3%;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    
+    .blog-header h3 {
+        font-size: 3.5vw;
+        padding: 1.5vw 2.5vw;
+    }
+    
+    .short-text {
+        font-size: 2.3vw;
+    }
+
+    .full-text {
+        font-size: 2.3vw;
+    }
+
+    .read-more-btn {
+        padding: 2vw 3vw;
+        font-size: 1.8vw;
+    }
+    
+    .like-btn, .share-btn, .comment-btn {
+        font-size: 2vw;
+    }
+    
+    .comment-input {
+        font-size: 1.8vw;
+    }
+    
+    .add-comment-btn {
+        padding: 2vw 3vw;
+        font-size: 1.8vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo {
+        margin-left: 3%;
+    }
+    .logo img {
+        width: 5vw;
+    }
+    .logo a {
+        text-decoration: none;
+    }
+
+    .logo p {
+        font-size: 5vw;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: #01004b;
+        position: absolute;
+        top: 6vw;
+        left: 0;
+        width: 100%;
+        padding: 2vw;
+    }
+
+    .navigation.active {
+        display: flex;
+        position: absolute;
+        z-index: 999
+    }
+
+    .navigation a {
+        margin: 1vw 0;
+        font-size: 4vw;
+    }
+
+    .burger-menu {
+        display: block;
+        font-size: 5vw;
+        margin-right: 3%;
+    }
+
+    .blog-container {
+        padding: 6vw 4vw;
+    }
+    
+    h2 {
+        font-size: 6vw;
+    }
+    
+    .blog-header h3 {
+        font-size: 4vw;
+        padding: 2vw 3vw;
+    }
+    
+    .short-text {
+        font-size: 3vw;
+    }
+
+    .full-text {
+        font-size: 3vw;
+    }
+
+    .read-more-btn {
+        padding: 2.5vw 4vw;
+        font-size: 2vw;
+    }
+    
+    .like-btn, .share-btn, .comment-btn {
+        font-size: 2.5vw;
+    }
+    
+    .comment-input {
+        font-size: 2vw;
+    }
+    
+    .add-comment-btn {
+        padding: 2.5vw 4vw;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+
+    }
+    .logo p {
+        font-size: 4vw;
+    }
+    .logo img {
+        width: 5vw;
+    }
+
+    .navigation a {
+        font-size: 3vw;
+    }
+
+    .link {
+
+    }
+    h2 {
+        font-size: 7vw;
+    }
+    
+    .blog-header h3 {
+        font-size: 5vw;
+        padding: 3vw 4vw;
+    }
+    
+    .short-text {
+        font-size: 4vw;
+    }
+
+    .full-text {
+        font-size: 4vw;
+    }
+
+    .read-more-btn {
+        padding: 3vw 5vw;
+        font-size: 2.5vw;
+    }
+    
+    .like-btn, .share-btn, .comment-btn {
+        font-size: 3vw;
+    }
+    
+    .comment-input {
+        font-size: 2.5vw;
+    }
+    
+    .add-comment-btn {
+        padding: 3vw 5vw;
+        font-size: 2.5vw;
+    }
+}

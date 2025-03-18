@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #01004b;
+    padding: 0.5vw 0;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 3vw;
+}
+
+.logo p {
+    margin-left: 1vw;
+    color: #ff5e00;
+    font-family: federant;
+    font-size: 2vw;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo :hover {
+    color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 1.3vw;
+    font-family: IMB;
+    color: #f0f4f5;
+    margin-left: 3vw;
+}
+
+.link:hover {
+    color: #ff5e00;
+    text-decoration: none;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 2vw;
+    background: none;
+    border: none;
+    color: #f0f4f5;
+    cursor: pointer;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #01004b;
+    color: #ffffff;
+    
+}
+
+.account {
+    max-width: 80vw;
+    margin: 4% auto;
+    padding: 3%;
+    background-color: #ffffff;
+    border-radius: 2vw;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5%;
+}
+
+/* Секция с информацией о пользователе */
+.infa {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.infa img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #00f7ff;
+    object-fit: cover;
+    margin-right: 4%;
+    background-color: #f0f0f0;
+}
+
+.infa_text h2 {
+    color: #01004b;
+    margin: 0 0 3%;
+    font-size: 1.6vw;
+}
+
+.infa_text p {
+    color: #333333;
+    margin: 2% 0;
+    font-size: 1.2vw;
+}
+
+/* Секция с курсами */
+.type_course {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+.type_course h3 {
+    color: #01004b;
+    margin-bottom: 4%;
+    font-size: 1.5vw;
+    position: relative;
+    padding-left: 3%;
+}
+
+.type_course h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 25px;
+    background-color: #ff5e00;
+    border-radius: 5px;
+}
+
+.completed {
+    /* margin-bottom: 30px; */
+}
+
+.completed h3 {
+    font-size: 1.4vw;
+}
+
+.completed h3::before {
+    background-color: #00d800;
+}
+.uncompleted h3 {
+    font-size: 1.4vw;
+    margin-top: 5%;
+}
+.uncompleted h3::before {
+    background-color: #00f7ff;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.7%;
+    background-color: #ffffff;
+    border-radius: 3px;
+    margin-bottom: 2%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.section:hover {
+    transform: translateY(-3px);
+}
+
+.section p {
+    font-size: 1.1vw;
+}
+
+.section p:first-child {
+    color: #01004b;
+    font-weight: bold;
+    margin: 0;
+}
+
+.section p:last-child {
+    color: #ff5e00;
+    font-weight: 600;
+    margin: 0;
+}
+
+.uncompleted .section {
+    opacity: 0.8;
+}
+
+.uncompleted .section p:last-child {
+    color: #999999;
+}
+
+/* Прогресс-бар */
+.progress-container {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 8px;
+    margin: 3% 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 70%;
+    background-color: #ff5e00;
+    border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        height: 10vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        margin-left: 3%;
+    }
+    .logo img {
+        width: 4vw;
+    }
+    .logo a {
+        text-decoration: none;
+    }
+
+    .logo p {
+        font-size: 4vw;
+    }
+
+    .navigation {
+
+    }
+    .navigation a {
+        
+    }
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: #01004b;
+        position: absolute;
+        top: 6vw;
+        left: 0;
+        width: 100%;
+        padding: 2vw;
+    }
+
+    .navigation.active {
+        display: flex;
+        position: absolute;
+        z-index: 999
+    }
+
+    .navigation a {
+        margin: 1vw 0;
+        font-size: 4vw;
+    }
+
+    .burger-menu {
+        display: block;
+        font-size: 5vw;
+        margin-right: 3%;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo {
+        margin-left: 3%;
+    }
+    .logo img {
+        width: 5vw;
+    }
+    .logo a {
+        text-decoration: none;
+    }
+
+    .logo p {
+        font-size: 5vw;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: #01004b;
+        position: absolute;
+        top: 6vw;
+        left: 0;
+        width: 100%;
+        padding: 2vw;
+    }
+
+    .navigation.active {
+        display: flex;
+        position: absolute;
+        z-index: 999
+    }
+
+    .navigation a {
+        margin: 1vw 0;
+        font-size: 4vw;
+    }
+
+    .burger-menu {
+        display: block;
+        font-size: 5vw;
+        margin-right: 3%;
+    }
+    .infa img {
+        height: 75px;
+        width: 75px;
+        border: 2px solid #00f7ff;
+    }
+    .infa_text h2 {
+        font-size: 3vw;
+    }
+    .infa_text p {
+        font-size: 2.2vw;
+    }
+    .type_course h3::before {
+        height: 20px;
+        width: 4px;
+    }
+    .account {
+        display: block;
+    }
+    .completed h3 {
+        font-size: 2vw;
+    }
+    
+    .uncompleted h3 {
+        font-size: 2vw;
+    }
+    .type_course h3 {
+        font-size: 3vw;
+    }
+    .section p {
+        font-size: 2vw;
+    }
+}
+
+
+@media (max-width: 480px) {
+    nav {
+
+    }
+    .logo p {
+        font-size: 5vw;
+    }
+    .logo img {
+        width: 5vw;
+    }
+
+    .navigation a {
+        font-size: 3vw;
+    }
+    .infa img {
+        height: 50px;
+        width: 50px;
+        border: 2px solid #00f7ff;
+    }
+    .infa_text h2 {
+        font-size: 3vw;
+    }
+    .infa_text p {
+        font-size: 2.2vw;
+    }
+    .type_course h3::before {
+        height: 10px;
+        width: 3px;
+    }
+    .account {
+        display: block;
+    }
+    .completed h3 {
+        font-size: 2vw;
+    }
+    
+    .uncompleted h3 {
+        font-size: 2vw;
+    }
+    .type_course h3 {
+        font-size: 3vw;
+    }
+    .section p {
+        font-size: 2vw;
+    }
+}

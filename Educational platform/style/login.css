@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #01004b;
+    padding: 0.5vw 0;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 3vw;
+}
+
+.logo p {
+    margin-left: 1vw;
+    color: #ff5e00;
+    font-family: federant;
+    font-size: 2vw;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo :hover {
+    color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 1.3vw;
+    font-family: IMB;
+    color: #f0f4f5;
+    margin-left: 3vw;
+}
+
+.link:hover {
+    color: #ff5e00;
+    text-decoration: none;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 2vw;
+    background: none;
+    border: none;
+    color: #f0f4f5;
+    cursor: pointer;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    background-color: #01004b;
+    color: #ffffff;
+}
+
+.container {
+    width: 30vw;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #ff5e00;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2vw;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 1.2vw;
+    color: #01004b;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #01004b;
+    font-size: 1.1vw;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #ff5e00;
+    outline: none;
+}
+
+button {
+    padding: 15px;
+    background-color: #ff5e00;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e65400;
+}
+
+button a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1vw;
+}
+
+.sign {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sign a {
+    color: #ff5e00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.1vw;
+}
+
+.sign a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+    nav {
+        height: 10vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        margin-left: 3%;
+    }
+    .logo img {
+        width: 4vw;
+    }
+    .logo a {
+        text-decoration: none;
+    }
+
+    .logo p {
+        font-size: 4vw;
+    }
+
+    .navigation {
+
+    }
+    .navigation a {
+        
+    }
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: #01004b;
+        position: absolute;
+        top: 6vw;
+        left: 0;
+        width: 100%;
+        padding: 2vw;
+    }
+
+    .navigation.active {
+        display: flex;
+        position: absolute;
+        z-index: 999
+    }
+
+    .navigation a {
+        margin: 1vw 0;
+        font-size: 4vw;
+    }
+
+    .burger-menu {
+        display: block;
+        font-size: 5vw;
+        margin-right: 3%;
+    }
+
+    .container {
+        width: 60vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+    label {
+        font-size: 2vw;
+    }
+
+    button a {
+        font-size: 2vw;
+    }
+    .sign a {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo {
+        margin-left: 3%;
+    }
+    .logo img {
+        width: 5vw;
+    }
+    .logo a {
+        text-decoration: none;
+    }
+
+    .logo p {
+        font-size: 5vw;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: #01004b;
+        position: absolute;
+        top: 6vw;
+        left: 0;
+        width: 100%;
+        padding: 2vw;
+    }
+
+    .navigation.active {
+        display: flex;
+        position: absolute;
+        z-index: 999
+    }
+
+    .navigation a {
+        margin: 1vw 0;
+        font-size: 4vw;
+    }
+
+    .burger-menu {
+        display: block;
+        font-size: 5vw;
+        margin-right: 3%;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+    label {
+        font-size: 2.5vw;
+    }
+
+    button a {
+        font-size: 2.5vw;
+    }
+    .sign a {
+        font-size: 2.5vw;
+    }
+}
+
+
+@media (max-width: 480px) {
+    nav {
+
+    }
+    .logo p {
+        font-size: 5vw;
+    }
+    .logo img {
+        width: 5vw;
+    }
+
+    .navigation a {
+        font-size: 3vw;
+    }
+    h2 {
+        font-size: 6vw;
+    }
+    label {
+        font-size: 4vw;
+    }
+
+    button a {
+        font-size: 3.5vw;
+    }
+    .sign a {
+        font-size: 3.5vw;
+    }
+    .container {
+        width: 70vw;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+        font-size: 3vw;
+    }
+}
