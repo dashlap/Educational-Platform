@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/register.css">
+    <title>Регистрация</title>
+</head>
+<header>
+    <nav>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/img/right-chevron.png" alt="pic">
+            </a>
+            <a href="../index.html">
+                <p>FutureSkills</p>
+            </a>
+        </div>
+        <button class="burger-menu" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <div class="navigation">
+            <a class="link" href="./training_courses.html">Курсы</a>
+            <a class="link" href="./blog.html">Блог</a>
+            <a class="link" href="./information.html">О FutureSkills</a>
+            <a class="link" href="./register.html">Регистрация</a>
+        </div>
+    </nav>
+</header>
+<body>
+    <main>
+        <div class="container">
+            <h2>Регистрация</h2>
+            <form id="registration-form">
+                <label for="register-surname">Фамилия</label>
+                <input type="text" id="register-surname" name="register-surname" required>
+
+                <label for="register-name">Имя</label>
+                <input type="text" id="register-name" name="register-name" required>
+
+                <label for="register-patronymic">Отчество</label>
+                <input type="text" id="register-patronymic" name="register-patronymic" required>
+
+                <label for="register-username">Имя пользователя</label>
+                <input type="text" id="register-username" name="register-username" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="register-password">Пароль</label>
+                <input type="password" id="register-password" name="register-password" required>
+
+                <label for="register-password">Подтверждение пароля</label>
+                <input type="password" id="register-password" name="register-password" required>
+                
+                <div class="policy">
+                    <input type="checkbox" id="check_mark" name="check_mark" />
+                    <label for="check_mark">Я согласен(а) с политикой платформы</label>
+                </div>
+
+                <button type="submit">
+                    <a href="./personal_account.html">Зарегистрироваться</a>
+                </button>
+            </form>
+    
+            <div class="sign">
+                <a href="./login.html">Уже есть аккаунт? Войдите!</a>
+            </div>
+        </div>
+    </main>
+    <script src="../js/register.js"></script>
+</body>
+</html>

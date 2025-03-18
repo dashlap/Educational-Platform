@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/login.css">
+    <title>Вход</title>
+</head>
+<header>
+    <nav>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/img/right-chevron.png" alt="pic">
+            </a>
+            <a href="../index.html">
+                <p>FutureSkills</p>
+            </a>
+        </div>
+        <button class="burger-menu" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <div class="navigation">
+            <a class="link" href="./training_courses.html">Курсы</a>
+            <a class="link" href="./blog.html">Блог</a>
+            <a class="link" href="./information.html">О FutureSkills</a>
+            <a class="link" href="./register.html">Регистрация</a>
+        </div>
+    </nav>
+</header>
+<body>
+    <main>
+        <div class="container">
+            <h2>Вход</h2>
+            <form id="login-form">
+                <label for="login-username">Имя пользователя</label>
+                <input type="text" id="login-username" name="login-username" required>
+    
+                <label for="login-password">Пароль</label>
+                <input type="password" id="login-password" name="login-password" required>
+    
+                <button type="submit"><a href="./personal_account.html">Войти</a></button>
+
+            </form>
+            <div class="sign">
+                <a href="./register.html">Ещё нет аккаунта? Зарегистрируйтесь!</a>
+            </div>
+        </div>
+    </main>
+    <script src="../js/login.js"></script>
+</body>
+</html>
